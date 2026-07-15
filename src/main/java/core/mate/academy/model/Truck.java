@@ -14,7 +14,9 @@ public class Truck extends Machine {
         return truckType;
     }
 
-    public void setTruckType(String truckType) { this.truckType = truckType; }
+    public void setTruckType(String truckType) {
+        this.truckType = truckType;
+    }
 
     @Override
     public void doWork() {

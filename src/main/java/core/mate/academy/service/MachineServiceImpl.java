@@ -24,13 +24,14 @@ public class MachineServiceImpl implements MachineService<Machine> {
         } else {
             return new ArrayList<>();
         }
-        return (List<Machine>) producer.get();
+        List<? extends Machine> machines = producer.get();
+        return new ArrayList<>(machines);
     }
 
     @Override
-    public void fill(List<? super Machine> machines, Object value) {
+    public <T extends Machine> void fill(List<? super T> machines, T value) {
         for (int i = 0; i < machines.size(); i++) {
-            machines.set(i, (Machine) value);
+            machines.set(i, value);
         }
     }
 

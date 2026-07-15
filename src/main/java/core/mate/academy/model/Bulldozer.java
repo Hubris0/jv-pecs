@@ -10,9 +10,13 @@ public class Bulldozer extends Machine {
     public Bulldozer() {
     }
 
-    public String getBladeType() { return bladeType; }
+    public String getBladeType() {
+        return bladeType;
+    }
 
-    public void setBladeType(String bladeType) { this.bladeType = bladeType; }
+    public void setBladeType(String bladeType) {
+        this.bladeType = bladeType;
+    }
 
     @Override
     public void doWork() {

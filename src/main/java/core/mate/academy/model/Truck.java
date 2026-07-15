@@ -10,7 +10,9 @@ public class Truck extends Machine {
     public Truck() {
     }
 
-    public String getTruckType() { return truckType; }
+    public String getTruckType() {
+        return truckType;
+    }
 
     public void setTruckType(String truckType) { this.truckType = truckType; }
 

@@ -10,7 +10,9 @@ public class Excavator extends Machine {
     public Excavator() {
     }
 
-    public String getTrackSuspensionType() { return trackSuspensionType; }
+    public String getTrackSuspensionType() {
+        return trackSuspensionType;
+    }
 
     public void setTrackSuspensionType(String trackSuspensionType) {
         this.trackSuspensionType = trackSuspensionType;

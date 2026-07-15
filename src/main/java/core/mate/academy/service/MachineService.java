@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Parameterize this service and add its implementation in a separate class.
  */
-public interface MachineService<Machine> {
+public interface MachineService<MachineT> {
 
     /**
      * Return the list of machines.
@@ -17,7 +17,7 @@ public interface MachineService<Machine> {
      * @param type - any class of Machine sub class. For example: Truck.class or Bulldozer.class
      * @return the list of machines
      */
-    List<Machine> getAll(Class<? extends Machine> type);
+    List<Machine> getAll(Class<? extends MachineT> type);
 
     /**
      * Fill the machines list with passed value
@@ -27,7 +27,7 @@ public interface MachineService<Machine> {
      * @param machines - list of machines to be filled with value
      * @param value    - any object of machine sub class
      */
-    <T extends Machine> void fill(List<? super T> machines, T value);
+    <T extends MachineT> void fill(List<? super T> machines, T value);
 
     /**
      * Call the method doWork() from each machine.
@@ -35,5 +35,5 @@ public interface MachineService<Machine> {
      *
      * @param machines - the list of machines
      */
-    void startWorking(List<? extends Machine> machines);
+    void startWorking(List<? extends MachineT> machines);
 }
